@@ -39,6 +39,11 @@ nav {
 .nav-links a:hover { color: var(--accent); }
 .lang-toggle { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink2); cursor: pointer; border: 1px solid var(--rule); padding: 0.28rem 0.75rem; background: none; font-family: var(--sans); transition: all 0.2s; }
 .lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.nav-portfolio { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bg); background: var(--accent); padding: 0.28rem 0.9rem; text-decoration: none; transition: all 0.2s; font-family: var(--sans); }
+.nav-portfolio:hover { background: var(--accent2); }
+.nav-portfolio span[data-lang="es"] { display: none; }
+body.es .nav-portfolio span[data-lang="es"] { display: inline; }
+body.es .nav-portfolio span[data-lang="en"] { display: none; }
 
 /* HERO */
 #hero {
@@ -215,6 +220,7 @@ span[data-lang="es"] { display: none; }
     <li><a href="#skills"><span data-lang="en">Skills</span><span data-lang="es">Habilidades</span></a></li>
     <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
   </ul>
+  <a href="https://authory.com/VanessaMena" target="_blank" class="nav-portfolio"><span data-lang="en">My Portfolio</span><span data-lang="es">Mi Portafolio</span></a>
   <button class="lang-toggle" onclick="toggleLang()">ES / EN</button>
 </nav>
 
@@ -431,6 +437,29 @@ span[data-lang="es"] { display: none; }
     </div>
 
   </div>
+
+  <div class="projects-grid" style="margin-top: 3rem;">
+    <div class="project-card fade-in">
+      <div class="project-type"><span data-lang="en">Editorial Content · Music · Ongoing</span><span data-lang="es">Contenido Editorial · Música · En curso</span></div>
+      <div class="project-name"><em>SoundCloud</em></div>
+      <div class="project-stat" style="font-size:1rem; font-weight:400; font-family: var(--sans);">Editorial & Playlist Content Producer</div>
+      <div class="project-desc" data-lang="en">Producing culturally targeted English and Spanish editorial content to support SoundCloud's platform initiatives and digital campaigns. Collaborating with cross-functional teams to align messaging, launches, and engagement goals — with a focus on Latin and multicultural music communities.</div>
+      <div class="project-desc" data-lang="es">Produciendo contenido editorial en inglés y español para apoyar las iniciativas de plataforma y campañas digitales de SoundCloud. Colaborando con equipos multifuncionales para alinear mensajes, lanzamientos y metas de engagement — con enfoque en comunidades musicales latinas y multiculturales.</div>
+      <div class="project-tags">
+        <span class="tag">Editorial Content</span>
+        <span class="tag">Playlist Curation</span>
+        <span class="tag">Latin Music</span>
+        <span class="tag">Bilingual EN/ES</span>
+        <span class="tag">Music Media</span>
+      </div>
+      <a href="https://soundcloud.com/stories/post/premios-2025-playlist" target="_blank" class="project-link"><span data-lang="en">See my work on SoundCloud →</span><span data-lang="es">Ver mi trabajo en SoundCloud →</span></a>
+    </div>
+
+    <div class="project-card fade-in" style="background: transparent; border: 1px solid var(--rule); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3rem;">
+      <div style="font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--ink2); margin-bottom: 1.5rem; line-height: 1.8;"><span data-lang="en">Want to read my articles, interviews, and full content portfolio?</span><span data-lang="es">¿Quieres leer mis artículos, entrevistas y portafolio completo de contenido?</span></div>
+      <a href="https://authory.com/VanessaMena" target="_blank" class="btn btn-primary"><span data-lang="en">View Full Portfolio →</span><span data-lang="es">Ver Portafolio Completo →</span></a>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
@@ -474,47 +503,4 @@ span[data-lang="es"] { display: none; }
         <span class="skill-pill">GA4</span><span class="skill-pill">Salesforce</span>
         <span class="skill-pill">Google Workspace</span><span class="skill-pill">Excel</span>
         <span class="skill-pill">Notion</span><span class="skill-pill">WordPress</span>
-        <span class="skill-pill">Adobe Audition</span><span class="skill-pill">Adobe Premiere</span>
-        <span class="skill-pill">Riverside</span><span class="skill-pill">Descript</span>
-        <span class="skill-pill">CapCut</span><span class="skill-pill">AI Content Tools</span>
-      </div>
-    </div>
-    <div class="skills-col">
-      <h3><span data-lang="en">Core Strengths</span><span data-lang="es">Fortalezas</span></h3>
-      <ul class="strengths-list">
-        <li><span data-lang="en">Storytelling & editorial vision</span><span data-lang="es">Storytelling y visión editorial</span></li>
-        <li><span data-lang="en">Building content from zero to scale</span><span data-lang="es">Construir contenido de cero a escala</span></li>
-        <li><span data-lang="en">Bilingual content strategy (EN/ES)</span><span data-lang="es">Estrategia de contenido bilingüe</span></li>
-        <li><span data-lang="en">Data analysis & performance storytelling</span><span data-lang="es">Análisis de datos y narrativa de resultados</span></li>
-        <li><span data-lang="en">Cross-functional collaboration</span><span data-lang="es">Colaboración multifuncional</span></li>
-        <li><span data-lang="en">Deadline reliability & accountability</span><span data-lang="es">Cumplimiento de plazos y responsabilidad</span></li>
-        <li><span data-lang="en">Adaptability & initiative</span><span data-lang="es">Adaptabilidad e iniciativa</span></li>
-        <li><span data-lang="en">Deep passion for audio, culture & media</span><span data-lang="es">Pasión por el audio, la cultura y los medios</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-eyebrow"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></div>
-  <h2><span data-lang="en">Let's make something <em>great.</em></span><span data-lang="es">Hagamos algo <em>grande.</em></span></h2>
-  <p class="contact-sub">
-    <span data-lang="en">Whether you're looking for a content strategist, a bilingual storyteller, or someone who genuinely loves building things — I'd love to connect.</span>
-    <span data-lang="es">Ya sea que busques una estratega de contenido, una narradora bilingüe, o alguien que genuinamente ama construir cosas — me encantaría conectar.</span>
-  </p>
-  <a href="/cdn-cgi/l/email-protection#3c5159525d5b124a5d52594f4f5d7c5b515d5550125f5351" class="contact-email">menag.vanessa&#64;gmail&#46;com</a>
-  <div class="contact-links">
-    <a href="https://linkedin.com/in/vanessamenagonzalez" target="_blank" class="contact-link">LinkedIn</a>
-    <a href="https://authory.com/VanessaMena" target="_blank" class="contact-link">Portfolio (Authory)</a>
-    <a href="https://open.spotify.com/show/4VrYZfmSOrr2Sb6liFa2Wd" target="_blank" class="contact-link">Podcast</a>
-    <a href="tel:7184067909" class="contact-link">718.406.7909</a>
-  </div>
-</section>
-
-<footer>
-  <span>© 2026 Vanessa Mena</span>
-  <span>USA · English / Español</span>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/sc
+        <span class="skill-pill">Adobe Audition</span><spa
