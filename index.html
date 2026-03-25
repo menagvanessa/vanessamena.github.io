@@ -270,24 +270,24 @@ span[data-lang="es"] { display: none; }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all 0.2s; }
 
-/* MOBILE MENU OVERLAY */
+/* MOBILE MENU OVERLAY - CSS only, no JS needed */
 .mobile-menu {
   display: none; position: fixed; inset: 0; z-index: 200;
   background: var(--bg); flex-direction: column; justify-content: center; align-items: center;
-  gap: 0;
 }
-.mobile-menu.open { display: flex; }
-.mobile-menu ul { list-style: none; text-align: center; }
+#menuToggle:checked ~ .mobile-menu { display: flex; }
+.mobile-menu ul { list-style: none; text-align: center; width: 100%; }
 .mobile-menu ul li { border-bottom: 1px solid var(--rule); }
+.mobile-menu ul li label { display: block; cursor: pointer; }
 .mobile-menu ul li a {
   display: block; padding: 1.2rem 3rem;
-  font-size: 1.1rem; color: var(--ink); text-decoration: none;
-  letter-spacing: 0.08em; transition: color 0.2s;
+  font-size: 1.15rem; color: var(--ink); text-decoration: none;
+  letter-spacing: 0.06em; transition: color 0.2s; font-family: var(--serif);
 }
 .mobile-menu ul li a:hover { color: var(--accent); }
 .mobile-menu-close {
   position: absolute; top: 1.5rem; right: 1.5rem;
-  background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink);
+  font-size: 1.5rem; cursor: pointer; color: var(--ink); line-height: 1;
 }
 
 @media (max-width: 820px) {
@@ -298,17 +298,18 @@ span[data-lang="es"] { display: none; }
 <body>
 
 <!-- MOBILE MENU -->
+<input type="checkbox" id="menuToggle" style="display:none;">
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <label for="menuToggle" class="mobile-menu-close">✕</label>
   <ul>
-    <li><a href="#about" onclick="goToSection('about'); return false;"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a></li>
-    <li><a href="#experience" onclick="goToSection('experience'); return false;"><span data-lang="en">Experience</span><span data-lang="es">Experiencia</span></a></li>
-    <li><a href="#cases" onclick="goToSection('cases'); return false;"><span data-lang="en">Case Studies</span><span data-lang="es">Casos</span></a></li>
-    <li><a href="#projects" onclick="goToSection('projects'); return false;"><span data-lang="en">Projects</span><span data-lang="es">Proyectos</span></a></li>
-    <li><a href="#testimonials" onclick="goToSection('testimonials'); return false;"><span data-lang="en">What They Say</span><span data-lang="es">Referencias</span></a></li>
-    <li><a href="#skills" onclick="goToSection('skills'); return false;"><span data-lang="en">Skills</span><span data-lang="es">Habilidades</span></a></li>
-    <li><a href="#contact" onclick="goToSection('contact'); return false;"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
-    <li><a href="https://authory.com/VanessaMena" target="_blank"><span data-lang="en">My Portfolio</span><span data-lang="es">Mi Portafolio</span></a></li>
+    <li><label for="menuToggle"><a href="#about">About / Sobre mí</a></label></li>
+    <li><label for="menuToggle"><a href="#experience">Experience / Experiencia</a></label></li>
+    <li><label for="menuToggle"><a href="#cases">Case Studies / Casos</a></label></li>
+    <li><label for="menuToggle"><a href="#projects">Projects / Proyectos</a></label></li>
+    <li><label for="menuToggle"><a href="#testimonials">What They Say / Referencias</a></label></li>
+    <li><label for="menuToggle"><a href="#skills">Skills / Habilidades</a></label></li>
+    <li><label for="menuToggle"><a href="#contact">Contact / Contacto</a></label></li>
+    <li><a href="https://authory.com/VanessaMena" target="_blank">My Portfolio →</a></li>
   </ul>
 </div>
 
@@ -325,9 +326,9 @@ span[data-lang="es"] { display: none; }
   </ul>
   <a href="https://authory.com/VanessaMena" target="_blank" class="nav-portfolio"><span data-lang="en">My Portfolio</span><span data-lang="es">Mi Portafolio</span></a>
   <button class="lang-toggle" onclick="toggleLang()">ES / EN</button>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <label for="menuToggle" class="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
-  </button>
+  </label>
 </nav>
 
 <!-- HERO -->
